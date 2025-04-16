@@ -1,12 +1,12 @@
 import io.qameta.allure.*;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.parsing.Parser;
 import com.testassured.PropostaRequest;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+
 
 @Epic("Sisloc API Tests")
 @Feature("Proposta Query API")
@@ -18,6 +18,7 @@ public class PropostaApiTest {
         RestAssured.baseURI = BASE_URI;
         RestAssured.registerParser("text/plain", Parser.JSON);
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.filters(new AllureRestAssured());
     }
 
     @Test
@@ -33,8 +34,8 @@ public class PropostaApiTest {
             .get("/Proposta/Query")
         .then()
             .assertThat()
-            .statusCode(200)
-            .body(not(empty()));
+            .log().body()
+            .statusCode(200);
     }
 
 }

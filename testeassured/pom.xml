@@ -14,7 +14,7 @@
         <java.version>22</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rest-assured.version>5.4.0</rest-assured.version>
-        <allure.version>2.20.1</allure.version>
+        <allure.version>2.24.0</allure.version>
         <junit.jupiter.version>5.10.2</junit.jupiter.version> 
         <surefire.version>3.2.3</surefire.version>
     </properties>
@@ -66,6 +66,11 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>5.4.0</version>
         </dependency>
     </dependencies>
 

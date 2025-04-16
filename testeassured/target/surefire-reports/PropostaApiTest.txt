@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: PropostaApiTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.055 s -- in PropostaApiTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.826 s -- in PropostaApiTest
